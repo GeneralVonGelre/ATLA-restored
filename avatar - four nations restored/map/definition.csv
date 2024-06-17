@@ -683,12 +683,12 @@ province;red;green;blue;x;x
 682;38;166;221;Ti  Diang;x,,,x,x,x,x,x,x,,
 683;128;145;208;Red River Crossing;x,,,x,x,x,x,x,x,,
 684;169;179;228;Da Dongjiang;x,,,x,x,x,x,x,x,,
-685;;;;;x
-686;;;;;x
-687;;;;;x
-688;;;;;x
-689;;;;;x
-690;;;;;x
+685;55;115;32;West Divide;x
+686;60;115;32;East Divide;x
+687;150;177;42;Western Pass;x
+688;170;177;42;Southern Pass;x
+689;180;177;42;Eastern Pass;x
+690;140;177;42;Northern Pass;x
 691;;;;;x
 692;;;;;x
 693;;;;;x
