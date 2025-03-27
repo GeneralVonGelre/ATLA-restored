@@ -1,10 +1,10 @@
-###########################################
-#                                         #
-# RIP Flavor Events		           		  #
-# ID RIP.4010 - RIP.4499                  #
-# ID RIP.29000 -
-#                                         #
-###########################################
+#############################################
+#											#
+#	RIP Flavor Events						#
+#	ID RIP.4010 - RIP.4499					#
+#	ID RIP.29000 -							#
+#											#
+#############################################
 
 #Court physician events written by Alexander Oltner & Mathilda Bjarnehed
 #Mourning events written by Mathilda Bjarnehed
@@ -1355,9 +1355,7 @@ character_event = {
 		hidden_tooltip = {
 			character_event = { id = RIP.11001 days = 365 random = 1095 }
 		}
-		
 	}
-
 }
 
 # Court Physician wants you to invest in provincial apothecaries
@@ -5592,7 +5590,6 @@ character_event = {
 	}
 
 	option = { FROM = { character_event = { id = RIP.29103 } } }
-	
 }
 
 character_event = {
@@ -8116,7 +8113,7 @@ character_event = {
 
 #######################################
 # LIEGE INTERFERES IN VASSAL WARS
-# by Henrik F�hraeus
+# by Henrik Fåhraeus
 #######################################
 
 # Vassal is asked by Liege to stop war of aggression against another vassal
@@ -8336,7 +8333,6 @@ letter_event = {
 			character_event = { id = RIP.30006 days = 3 }
 		}
 	}
-	
 }
 
 # Vassal agrees, asking for nothing
@@ -8369,8 +8365,8 @@ letter_event = {
 				end_war = whitepeace
 			}
 			set_pacified = {
-                years = 1
-            }
+				years = 1
+			}
 		}
 	}
 }
@@ -8433,8 +8429,8 @@ letter_event = {
 				end_war = whitepeace
 			}
 			set_pacified = {
-                years = 3
-            }
+				years = 3
+			}
 		}
 	}
 	
@@ -8561,8 +8557,8 @@ letter_event = {
 				end_war = whitepeace
 			}
 			set_pacified = {
-                years = 3
-            }
+				years = 3
+			}
 		}
 	}
 	
@@ -8632,8 +8628,8 @@ letter_event = {
 		}
 		
 		set_pacified = {
-                years = 2
-        }
+			years = 2
+		}
 		
 		tooltip = {
 			reverse_opinion = {
@@ -9076,7 +9072,6 @@ letter_event = {
 			years = 3
 		}
 	}
-	
 }
 
 # Vassal agrees, asking for a Favor
@@ -10596,4 +10591,3 @@ character_event = {
 		custom_tooltip = { text = EVTOPTA_RIP_30204_TOOLTIP }
 	}
 }
-
