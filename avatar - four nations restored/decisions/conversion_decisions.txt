@@ -3,6 +3,7 @@ targetted_decisions = {
 	ask_to_convert = { ##TODO: Overhaul this to an AI acceptance system based on opinion and how different religions are
 		filter = realm
 		ai_target_filter = realm
+		ai_check_interval = 60
 
 		from_potential = {
 			is_ruler = yes
@@ -33,8 +34,8 @@ targetted_decisions = {
 				hidden_tooltip = {
 					OR = {
 						FROM = {
-							NOR = {
-								religion = the_eternal_flame
+							NOR = { 
+								religion = the_eternal_flame 
 								religion = the_eternal_flame_reformed
 							}
 						}
@@ -147,8 +148,8 @@ targetted_decisions = {
 								trait = content
 							}
 						}
-						NOR = {
-							religion = the_eternal_flame
+						NOR = { 
+							religion = the_eternal_flame 
 							religion = the_eternal_flame_reformed
 						}
 					}
@@ -161,7 +162,7 @@ targetted_decisions = {
 					}
 					NOR = {
 						trait = avatar
-						trait = fullyrealisedavatar
+						trait = fully_realised_avatar
 						has_character_flag = is_ta_min #Canon enforcement
 					}
 				}
@@ -273,10 +274,7 @@ targetted_decisions = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					trait = avatar
-					trait = fullyrealisedavatar
-				}
+				has_character_flag = is_avatar
 			}
 		}
 	}
@@ -324,6 +322,20 @@ targetted_decisions = {
 					modifier = ruler_converted_from
 				}
 
+				if = {
+					limit = { trait = cynical }
+					random = {
+						chance = 60
+						add_sympathy_for_prevs_open_religion_effect = yes
+					}
+				}
+				else = {
+					random = {
+						chance = 50
+						add_sympathy_for_prevs_open_religion_effect = yes
+					}
+				}
+				
 				religion = ROOT
 
 				hidden_tooltip = {
@@ -380,26 +392,17 @@ targetted_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = { liege = { trait = pagan_branch_1 } } ##Remember that reformed spiritualists can still get these! - Liz
-				add_trait = pagan_branch_1
-			}
-			if = {
-				limit = { liege = { trait = pagan_branch_2 } }
-				add_trait = pagan_branch_2
-			}
-			if = {
-				limit = { liege = { trait = pagan_branch_3 } }
-				add_trait = pagan_branch_3
-			}
-			if = {
-				limit = { liege = { trait = pagan_branch_4 } }
-				add_trait = pagan_branch_4
+			liege = {
+				trigger_switch = {
+					on_trigger = trait
+					pagan_branch_1 = { ROOT = { add_trait = pagan_branch_1 } }
+					pagan_branch_2 = { ROOT = { add_trait = pagan_branch_2 } }
+					pagan_branch_3 = { ROOT = { add_trait = pagan_branch_3 } }
+					pagan_branch_4 = { ROOT = { add_trait = pagan_branch_4 } }
+				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -464,9 +467,7 @@ targetted_decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -498,9 +499,7 @@ targetted_decisions = {
 				culture = ROOT
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -531,9 +530,7 @@ targetted_decisions = {
 				reverse_culture = ROOT
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -581,14 +578,10 @@ targetted_decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.25
-			}
+			factor = 0.25
+
 			modifier = {
 				factor = 0
 				primary_title = {
@@ -656,102 +649,21 @@ targetted_decisions = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = { true_religion_group = ROOT }
-					}
-				}
-				prestige = -1000
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						true_religion_group = ROOT
-					}
-				}
-				prestige = -500
-			}
+			prestige = -500
 			piety = 250
 			religion_authority = {
 				modifier = ruler_converted_from
 			}
 			if = {
 				limit = {
-					religion_group = air_religions
-					NOT = { trait = sympathy_air_religions }
 					capital_scope = {
 						NOT = { true_religion_group = ROOT }
 					}
 				}
+				prestige = -500
 				random = {
 					chance = 60
-					add_trait = sympathy_air_religions
-				}
-			}
-			if = {
-				limit = {
-					religion_group = earth_religions
-					NOT = { trait = sympathy_earth_religions }
-					capital_scope = {
-						NOT = { true_religion_group = ROOT }
-					}
-				}
-				random = {
-					chance = 60
-					add_trait = sympathy_earth_religions
-				}
-			}
-			if = {
-				limit = {
-					religion_group = fire_religions
-					NOT = { trait = sympathy_fire_religions }
-					capital_scope = {
-						NOT = { true_religion_group = ROOT }
-					}
-				}
-				random = {
-					chance = 60
-					add_trait = sympathy_fire_religions
-				}
-			}
-			if = {
-				limit = {
-					religion_group = water_religions
-					NOT = { trait = sympathy_water_religions }
-					capital_scope = {
-						NOT = { true_religion_group = ROOT }
-					}
-				}
-				random = {
-					chance = 60
-					add_trait = sympathy_water_religions
-				}
-			}
-			if = {
-				limit = {
-					religion_group = outlaw_religions
-					NOT = { trait = sympathy_outlaw_religions }
-					capital_scope = {
-						NOT = { true_religion_group = ROOT }
-					}
-				}
-				random = {
-					chance = 60
-					add_trait = sympathy_outlaw_religions
-				}
-			}
-			if = {
-				limit = {
-					religion_group = modern_religions
-					NOT = { trait = sympathy_modern_religions }
-					capital_scope = {
-						NOT = { true_religion_group = ROOT }
-					}
-				}
-				random = {
-					chance = 60
-					add_trait = sympathy_modern_religions
+					add_sympathy_for_religion_effect = yes
 				}
 			}
 			custom_tooltip = { text = local_religion_conversion_tooltip }
@@ -766,9 +678,7 @@ targetted_decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -803,9 +713,7 @@ targetted_decisions = {
 				modifier = ruler_converted_to
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
+
 		ai_will_do = {
 			factor = 0
 		}
@@ -917,15 +825,11 @@ targetted_decisions = {
 #						modifier = ruler_converted_to
 #					}
 #				}
-#				reverse_religion = ROOT
+#				reverse_religion = ROOT 
 #			}
 #			religion_authority = {
 #				modifier = ruler_converted_from
 #			}
-#		}
-#		
-#		revoke_allowed = {
-#			always = no
 #		}
 #		
 #		ai_will_do = {

@@ -1572,8 +1572,8 @@ b_north_pole;North Pole;North Pole;North Pole;;North Pole;;;;;;;;;x
 b_north_pole_adj;North Polean;;North Poler;;;;;;;;;;;x
 b_north_wall;North Wall;North Wall;North Wall;;North Wall;;;;;;;;;x
 b_north_wall_adj;North Wallian;;North Waller;;;;;;;;;;;x
-b_northern_air_temple;Northern Air Temple;Northen Air Temple;Northen Air Temple;;Northen Air Temple;;;;;;;;;x
-b_northern_air_temple_adj;Northern Air Templean;;Northen Air Templer;;;;;;;;;;;x
+b_northern_air_temple;Northern Air Temple;Northern Air Temple;Northern Air Temple;;Northern Air Temple;;;;;;;;;x
+b_northern_air_temple_adj;Northern Air Templean;;Northern Air Templer;;;;;;;;;;;x
 b_agna_qel'a;Agna Qel'a;Agna Qel'a;Agna Qel'a;;Agna Qel'a;;;;;;;;;x
 b_agna_qel'a_adj;Agna Qel'an;;Agna Qel'er;;;;;;;;;;;x
 b_northside;Northside;Northside;Northside;;Northside;;;;;;;;;x
@@ -2002,8 +2002,8 @@ b_south_gate;South Gate;South Gate;South Gate;;South Gate;;;;;;;;;x
 b_south_gate_adj;South Gatean;;South Gater;;;;;;;;;;;x
 b_south_pole;South Pole;South Pole;South Pole;;South Pole;;;;;;;;;x
 b_south_pole_adj;South Polean;;South Poler;;;;;;;;;;;x
-b_southen_water_tribe;Southen Water Tribe;Southen Water Tribe;Southen Water Tribe;;Southen Water Tribe;;;;;;;;;x
-b_southen_water_tribe_adj;Southen Water Tribean;;Southen Water Triber;;;;;;;;;;;x
+b_southern_water_tribe;Southern Water Tribe;Southern Water Tribe;Southern Water Tribe;;Southern Water Tribe;;;;;;;;;x
+b_southern_water_tribe_adj;Southern Water Tribean;;Southern Water Triber;;;;;;;;;;;x
 b_southern_air_temple;Southern Air Temple;Southern Air Temple;Southern Air Temple;;Southern Air Temple;;;;;;;;;x
 b_southern_air_temple_adj;Southern Air Templean;;Southern Air Templer;;;;;;;;;;;x
 b_spirit_acadamy;Spirit Acadamy;Spirit Acadamy;Spirit Acadamy;;Spirit Acadamy;;;;;;;;;x

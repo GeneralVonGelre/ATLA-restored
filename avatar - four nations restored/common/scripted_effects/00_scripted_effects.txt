@@ -9666,7 +9666,7 @@ add_western_zodiac_trait_effect = {
 	}
 }
 
-flip_secret_religious_community_provinces = {
+flip_secret_religious_community_provinces = { ##NOTE: This seems to be missing all other socities? That could be breaking something if secret faiths are implemented. - Liz
 	trigger_switch = {
 		on_trigger = society_member_of
 		secret_religious_society_fire_nation_imperialism = {
@@ -13857,10 +13857,10 @@ weight_trait_check_effect = {
 		add_trait = is_malnourished
 		hidden_tooltip = { character_event = { id = HFP.20602 } } #Notification
 	}
-}
 
-apply_weight_modifier_effect = {
-	if = {
+}  
+apply_weight_modifier_effect = { 
+	if = { 
 		limit = {
 			OR = {
 				has_character_flag = flag_fat_for_gluttony
