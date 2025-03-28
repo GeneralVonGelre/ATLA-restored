@@ -23,14 +23,15 @@ character_event = {
 		}
 	}
 	
-	option = {
+	option = { ##Note: This likely needs to be moved into the immediate file or swapped to a new event, since the player can't click this option. - Liz
 		if = {
 			limit = {
 				check_variable = { which = global_world_luck value >= 5 }
 			}
 			set_global_flag = global_world_luck_good
 			clr_global_flag = global_world_luck_bad
-		} else = {
+		}
+		else = {
 			clr_global_flag = global_world_luck_good
 			set_global_flag = global_world_luck_bad
 		}
@@ -243,7 +244,7 @@ character_event = { # Look for a fortune telling teacher
 		name = find_a_ft_teacher_normal
 		capital_scope = {
 			if = {
-				limit = { 
+				limit = {
 					has_building = fortune_telling_building_4
 				}
 				ROOT = {
@@ -254,7 +255,7 @@ character_event = { # Look for a fortune telling teacher
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					has_building = fortune_telling_building_3
 				}
 				ROOT = {
@@ -265,7 +266,7 @@ character_event = { # Look for a fortune telling teacher
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					has_building = fortune_telling_building_2
 				}
 				ROOT = {
@@ -276,7 +277,7 @@ character_event = { # Look for a fortune telling teacher
 				}
 			}
 			else_if = {
-				limit = { 
+				limit = {
 					has_building = fortune_telling_building_1
 				}
 				ROOT = {
@@ -306,11 +307,11 @@ character_event = { # Look for a fortune telling teacher
 		character_event = { id = FORTUNE.1001 days = 50 random = 10 }
 		
 		ai_chance = {
-        	factor = 1
-        	modifier = { trait = deceitful factor = 20 }
+			factor = 1
+			modifier = { trait = deceitful factor = 20 }
 			modifier = { trait = slothful factor = 3 }
 			modifier = { trait = paranoid factor = 3 }
-        	modifier = { trait = patient factor = 0.25 }
+			modifier = { trait = patient factor = 0.25 }
 		}
 	}
 }

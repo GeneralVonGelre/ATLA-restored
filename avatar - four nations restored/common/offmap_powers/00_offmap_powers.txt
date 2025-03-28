@@ -186,7 +186,7 @@
 #			value = -0.25
 #			FROM = { likes_ambitious = yes }
 #		}
-#		offmap_likes_arbitrary = { 
+#		offmap_likes_arbitrary = {
 #			value = -0.25
 #			FROM = { likes_arbitrary = yes }
 #		}
@@ -238,22 +238,22 @@
 #			}
 #		}
 #		dislikes = {
-#			# likes = 
+#			# likes =
 #		}
 #	}
 #	
 #	diplomatic_range = { #Already includes the western governor's "normal" diplo range
-#        OR = {
-#            has_game_rule = {
-#                name = chinese_interactions
-#                value = all
-#            }
-#            AND = {
-#                has_game_rule = {
-#                    name = chinese_interactions
-#                    value = within_range
-#                }
+#		OR = {
+#			has_game_rule = {
+#				name = chinese_interactions
+#				value = all
+#			}
+#			AND = {
+#				has_game_rule = {
+#					name = chinese_interactions
+#					value = within_range
+#				}
 #			}
 #		}
 #	}
-#}	
+#}

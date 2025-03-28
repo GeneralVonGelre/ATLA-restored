@@ -6780,10 +6780,7 @@ character_event = {
 					trait = legendary_bender
 					AND = {
 						trait = master_bender
-						OR = {
-							trait = fullyrealisedavatar
-							trait = avatar
-						}
+						trait = avatar
 					}
 				}
 			}
@@ -9177,46 +9174,17 @@ character_event = {
 		add_society_currency_minor_effect = yes
 		if = {
 			limit = {
-            OR = {
-               trait = legendary_bender
-               AND = {trait = master_bender
-                  OR = {
-                     trait = fullyrealisedavatar
-                     trait = avatar
-                  }
-               }
-            }
-         }
+				OR = {
+					trait = legendary_bender
+					AND = {
+						trait = master_bender
+						trait = avatar
+					}
+				}
+			}
 			health = 0.2
 		}
-      else_if = {
-			limit = {
-				trait = master_bender
-			}
-			remove_trait = master_bender 
-			add_trait = legendary_bender
-		}
-		else_if = {
-			limit = {
-				trait = powerful_bender
-			}
-			remove_trait = powerful_bender 
-			add_trait = master_bender
-		}
-		else_if = {
-			limit = {
-				trait = competent_bender
-			}
-			remove_trait = competent_bender 
-			add_trait = powerful_bender
-		}
-		else_if = {
-			limit = {
-				trait = incompetent_bender
-			}
-			remove_trait = incompetent_bender 
-			add_trait = competent_bender
-		}
+		else = { upgrade_bending_effect = yes }
 	}
 }
 
@@ -10708,15 +10676,11 @@ character_event = {
 	option = { # Commence Training
 		name = EVTOPTA_MNSAK_5212
 		trigger = {
-			NOT = { 
+			NOR = { 
 				OR = {
 					trait = legendary_bender
 					AND = {
 						trait = avatar
-						trait = master_bender
-					}
-					AND = {
-						trait = fullyrealisedavatar
 						trait = master_bender
 					}
 				}
@@ -10729,12 +10693,12 @@ character_event = {
 	option = { # Gain Sub-Type
 		name = EVTOPTB_MNSAK_5212
 		trigger = {
-			NOT = { trait = airbender }
 			OR = {
 				trait = master_bender
 				trait = legendary_bender
 			}
 			NOR = {
+				trait = airbender
 				trait = lightningbender
 				trait = healer
 				trait = seismicsense_nonblind

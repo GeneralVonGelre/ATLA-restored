@@ -390,8 +390,10 @@ narrative_event = { # The Golden Age of Piracy - START
 	option = { # World
 		name = EVTOPTTLAC.4006
 		trigger = {
-			NOT = { religion = pirate_faith }
-			NOT = { culture_group = earth_kingdom_cultures }
+			NOR = {
+				religion = pirate_faith
+				culture_group = earth_kingdom_cultures
+			}
 		}
 	}
 }
@@ -478,17 +480,9 @@ character_event = { # Age Update
 				year = 569
 				NOT = { year = 571 }
 				NOT = { has_global_flag = kyoshi_warriors_founded }
-				d_avatar = {
-					owner = {
-						has_character_flag = is_kyoshi
-					}
-				}
+				c_34 = { is_alive = yes } #This is Kyoshi
 			}
-			d_avatar = {
-				owner = {
-					narrative_event = { id = ATLAE.4000 }
-				}
-			}
+			c_34 = { narrative_event = { id = ATLAE.4000 } }
 		}
 		if = { # Golden Age of Piracy Event
 			limit = {
@@ -827,15 +821,9 @@ character_event = { # Colonies Confrontation - Check if Avatar or Earth King sen
 	immediate = {
 		if = {
 			limit = {
-				d_avatar = {
-					has_holder = yes
-				}
+				persistent_event_target:the_avatar = { is_alive = yes }
 			}
-			d_avatar = {
-				owner = {
-					character_event = { id = ATLAE.1 }
-				}
-			}
+			persistent_event_target:the_avatar = { character_event = { id = ATLAE.1 } }
 		}
 		else = {
 			ROOT = {

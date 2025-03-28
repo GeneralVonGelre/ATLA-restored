@@ -1848,10 +1848,7 @@ five_seven_fiver_society = { # Five-Seven-Fiver
 			age = 16
 			is_in_society = no
 			is_dumb_trigger = no
-			NOR = {
-				trait = avatar
-				trait = fullyrealisedavatar
-			}
+			NOT = { has_character_flag = is_avatar }
 			OR = {
 				is_landed = yes
 				learning = 14

@@ -85,7 +85,7 @@ character_event = {
 		if = {
 			limit = {
 				any_owned_bloodline = {
-					has_bloodline_flag = is_chin_kyoshi_killer_bloodline
+					has_bloodline_flag = is_avatar_killer_bloodline
 				}
 			}
 			change_variable = { which = propaganda_yearly value = 3 }

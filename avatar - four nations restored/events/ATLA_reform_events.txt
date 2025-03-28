@@ -35,19 +35,34 @@ narrative_event = {
 		text = air_reform
 		sound = pagan_reformation
 	}
-	desc = { ##TODO: This might not work
+	desc = {
 		trigger = {
 			has_dlc = "Holy Fury"
 			ROOT = { religion = barbarism_reformed }
+			barbarism_reformed = { has_religion_feature = religion_feature_old_barbarism }
 		}
-		trigger_switch = {
-			on_trigger = has_religion_feature
-			religion_feature_old_barbarism = { text = REFORM_BARBARISM_OLD_WAYS_DESC }
-			religion_feature_new_barbarism = { text = REFORM_BARBARISM_NEW_PATH_DESC }
-			fallback = { text = REFORM_BARBARISM_NEITHER_DESC }
+		text = REFORM_BARBARISM_OLD_WAYS_DESC
+	}
+	desc = {
+		trigger = {
+			has_dlc = "Holy Fury"
+			ROOT = { religion = barbarism_reformed }
+			barbarism_reformed = { has_religion_feature = religion_feature_new_barbarism }
 		}
-		text = REFORM.1.BACKUP.DESC
-		sound = pagan_reformation
+		text = REFORM_BARBARISM_NEW_PATH_DESC
+	}
+	desc = {
+		trigger = {
+			has_dlc = "Holy Fury"
+			ROOT = { religion = barbarism_reformed }
+			barbarism_reformed = {
+				NOR = {
+					has_religion_feature = religion_feature_old_barbarism
+					has_religion_feature = religion_feature_new_barbarism
+				}
+			}
+		}
+		text = REFORM_BARBARISM_NEITHER_DESC
 	}
 	desc = {
 		trigger = {

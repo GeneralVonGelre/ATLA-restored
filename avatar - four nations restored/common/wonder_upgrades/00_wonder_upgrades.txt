@@ -421,7 +421,6 @@ upgrade_vineyard = {
 		custom_modifier_text = produces_alcohol_modifier_tt
 		custom_modifier_text = private_talk_possible_modifier_tt
 	}
-
 }
 
 upgrade_historical_mural = {
@@ -512,7 +511,7 @@ upgrade_statue_god = {
 	}
 }
 
-upgrade_temple_guards = { 
+upgrade_temple_guards = {
 	picture = GFX_upgrade_icon_guard
 	
 	potential = { }
@@ -532,7 +531,7 @@ upgrade_temple_guards = {
 	}
 }
 
-upgrade_sacrificial_altar = { 
+upgrade_sacrificial_altar = {
 	picture = GFX_upgrade_icon_skulls
 
 	potential = { has_religion_feature = religion_ritual_sacrifice }
@@ -553,7 +552,7 @@ upgrade_sacrificial_altar = {
 	}
 }
 
-upgrade_sacred_grove = { 
+upgrade_sacred_grove = {
 	picture = GFX_upgrade_icon_roses_white
 
 	potential = { }
@@ -578,7 +577,7 @@ upgrade_sacred_grove = {
 	}
 }
 
-upgrade_prophecy_rooms = { 
+upgrade_prophecy_rooms = {
 	picture = GFX_upgrade_icon_crates
 
 	potential = { }
@@ -597,7 +596,7 @@ upgrade_prophecy_rooms = {
 	}
 }
 
-upgrade_temple_precinct = { 
+upgrade_temple_precinct = {
 	picture = GFX_upgrade_icon_crates
 
 	potential = { }
@@ -615,7 +614,7 @@ upgrade_temple_precinct = {
 	}
 }
 
-upgrade_inner_sanctuary = { 
+upgrade_inner_sanctuary = {
 	picture = GFX_upgrade_icon_crates
 
 	potential = { }
@@ -1557,7 +1556,7 @@ upgrade_poisonous_flowers = {
 	}
 }
 
-upgrade_herb_garden = { 
+upgrade_herb_garden = {
 	picture = GFX_upgrade_icon_roses_pink
 
 	potential = { }
@@ -1577,7 +1576,7 @@ upgrade_herb_garden = {
 	}
 }
 
-upgrade_statues_garden = { 
+upgrade_statues_garden = {
 	picture = GFX_upgrade_icon_statue
 	potential = { }
 	allow = { }

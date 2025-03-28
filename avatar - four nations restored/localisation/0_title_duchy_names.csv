@@ -157,8 +157,8 @@ d_north_huidong;North Huidong;North Huidong;North Huidong;;North Huidong;;;;;;;;
 d_north_huidong_adj;North Huidong;;North Huidonger;;;;;;;;;;;x
 d_north_plain;North Plain;North Plain;North Plain;;North Plain;;;;;;;;;x
 d_north_plain_adj;North Plain;;North Plainer;;;;;;;;;;;x
-d_northen_water_tribe;Northern Water Tribe;Northen Water Tribe;Northen Water Tribe;;Northen Water Tribe;;;;;;;;;x
-d_northen_water_tribe_adj;Northern Water Tribe;;Northen Water Triber;;;;;;;;;;;x
+d_northern_water_tribe;Northern Water Tribe;Northern Water Tribe;Northern Water Tribe;;Northern Water Tribe;;;;;;;;;x
+d_northern_water_tribe_adj;Northern Water Tribe;;Northern Water Triber;;;;;;;;;;;x
 d_northern_air_temple;Northern Air Temple;Northern Air Temple;Northern Air Temple;;Northern Air Temple;;;;;;;;;x
 d_northern_air_temple_adj;Northern Air Temple;;Northern Air Templer;;;;;;;;;;;x
 d_omashu;Omashu;Omashu;Omashu;;Omashu;;;;;;;;;x
@@ -195,8 +195,8 @@ d_south_huidong;South Huidong;South Huidong;South Huidong;;South Huidong;;;;;;;;
 d_south_huidong_adj;South Huidong;;South Huidonger;;;;;;;;;;;x
 d_south_islands;Karokou Island;South Islands;South Islands;;South Islands;;;;;;;;;x
 d_south_islands_adj;Karokou Islander;;South Islandser;;;;;;;;;;;x
-d_southen_water_tribe;Umiak;Southen Water Tribe;Southen Water Tribe;;Southen Water Tribe;;;;;;;;;x
-d_southen_water_tribe_adj;Umiak;;Southen Water Triber;;;;;;;;;;;x
+d_southern_water_tribe;Umiak;Southern Water Tribe;Southern Water Tribe;;Southern Water Tribe;;;;;;;;;x
+d_southern_water_tribe_adj;Umiak;;Southern Tribe;;;;;;;;;;;x
 d_southern_air_islands;Southern Air Islands;Southern Air Islands;Southern Air Islands;;Southern Air Islands;;;;;;;;;x
 d_southern_air_islands_adj;Southern Air Islander;;Southern Air Islandser;;;;;;;;;;;x
 d_sunan;Xigousi;Sunan;Sunan;;Sunan;;;;;;;;;x
@@ -302,8 +302,6 @@ d_daimahn;Daimahn;Daimahn;Daimahn;;Daimahn;;;;;;;;;x
 d_daimahn_adj;Daimahn;Daimahn;Daimahn;;Daimahn;;;;;;;;;x
 d_yamayoko;Yamayoko;Yamayoko;Yamayoko;;Yamayoko;;;;;;;;;x
 d_yamayoko_adj;Yamayoko;Yamayoko;Yamayoko;;Yamayoko;;;;;;;;;x
-d_avatar;Avatar's Court;Avatar's Court;Avatar's Court;;Avatar's Court;;;;;;;;;x
-d_avatar_adj;Avatar's Court;Avatar's Court;Avatar's Court;;Avatar's Court;;;;;;;;;x
 d_red_river_pirates;Red River Pirates;Taki;Taki;;Taki;;;;;;;;;x
 d_red_river_pirates_adj;Red River Pirate;Taki;Taki;;Taki;;;;;;;;;x
 d_ishigaki_pirates;Ishigaki Pirates;Taki;Taki;;Taki;;;;;;;;;x
@@ -370,8 +368,6 @@ d_namtso;Namtso;;;;;;;;;;;;x
 d_kangaroo_island;Kangaroo Island;;;;;;;;;;;;x
 d_the_divided;The Divided;;;;;;;;;;;x
 d_earth_monarchism;Earth Monarchism;;;;;;;;;;;x
-d_the_sages;The Spirits;A;A;;A;;;;;;;;;x
-d_the_sages_adj;Spiritual;A;A;;A;;;;;;;;;x
 d_princes_hunt;Prince Zuko's Hunt;A;A;;A;;;;;;;;;x
 d_princes_hunt_adj;Royal Hunt;A;A;;A;;;;;;;;;x
 d_rough_rhinos;Rough Rhinos;A;A;;A;;;;;;;;;x

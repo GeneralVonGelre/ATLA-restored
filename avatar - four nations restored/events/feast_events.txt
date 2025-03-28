@@ -9,7 +9,7 @@
 ###################################
 #
 # Designed by Johan Andersson
-# Written by Sara Wendel-Örtqvist
+# Written by Sara Wendel-Ã–rtqvist
 
 ###################################
 #Events before the Feast
@@ -876,14 +876,14 @@ character_event = {
 					limit = {
 						is_female = yes
 					}
-					OR = { 
+					OR = {
 						primary_title = { has_law = status_of_women_4 }
 						has_game_rule = {
 							name = gender
 							value = all
 						}
-						has_religion_feature = religion_matriarchal 
-						has_religion_feature = religion_equal 
+						has_religion_feature = religion_matriarchal
+						has_religion_feature = religion_equal
 					}
 				}
 				is_abroad = no
@@ -893,9 +893,9 @@ character_event = {
 				is_alive = yes
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
-	            value = 10
-	            interesting_courtier_selection_score = yes
-	        }
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
 			prestige = 10
 			opinion = {
 				modifier = opinion_flattered
@@ -926,14 +926,14 @@ character_event = {
 				limit = {
 					is_female = yes
 				}
-				OR = { 
+				OR = {
 					primary_title = { has_law = status_of_women_4 }
 					has_game_rule = {
 						name = gender
 						value = all
 					}
-					has_religion_feature = religion_matriarchal 
-					has_religion_feature = religion_equal 
+					has_religion_feature = religion_matriarchal
+					has_religion_feature = religion_equal
 				}
 			}
 			NOT = { health_traits = 1 }
@@ -1181,7 +1181,7 @@ character_event = {
 	option = {
 		name = "EVTOPTA72015"
 		set_character_flag = host_feast_started
-		hidden_tooltip = { 
+		hidden_tooltip = {
 			any_vassal = {
 				limit = {
 					has_character_flag =  coming_to_feast
@@ -1204,14 +1204,14 @@ character_event = {
 						}
 					}
 					any_vassal = {
-						limit = { 
+						limit = {
 							has_character_flag = guest_feast_started
 							war = no
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72020 days = 3 }
 					}
 				}
@@ -1227,14 +1227,14 @@ character_event = {
 						}
 					}
 					any_vassal = {
-						limit = { 
+						limit = {
 							has_character_flag = guest_feast_started
 							war = no
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72021 days = 3 }
 					}
 				}
@@ -1250,14 +1250,14 @@ character_event = {
 						}
 					}
 					any_vassal = {
-						limit = { 
+						limit = {
 							has_character_flag = guest_feast_started
 							war = no
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72022 days = 3 }
 					}
 				}
@@ -1404,9 +1404,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72050 days = 10 }
 					}
 				}
@@ -1518,9 +1518,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72030 days = 10 }
 					}
 				}
@@ -1600,9 +1600,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72025 days = 10 }
 					}
 				}
@@ -1696,9 +1696,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72027 days = 10 }
 					}
 				}
@@ -1788,9 +1788,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72055 days = 14 }
 					}
 				}
@@ -1828,9 +1828,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72045 days = 14 }
 					}
 				}
@@ -1882,9 +1882,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72046 days = 14 }
 					}
 				}
@@ -1924,9 +1924,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72048 days = 14 }
 					}
 				}
@@ -2101,9 +2101,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72040 days = 14 }
 					}
 				}
@@ -2263,9 +2263,9 @@ character_event = {
 							}
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						character_event = { id = 72090 days = 14 }
 					}
 				}
@@ -2836,7 +2836,7 @@ character_event = {
 	}
 
 	immediate = {
-		any_liege = { 
+		any_liege = {
 			random_vassal = {
 				limit = {
 					is_adult = yes
@@ -3137,7 +3137,7 @@ character_event = {
 		}
 		hidden_tooltip = {
 			if = {
-				limit = { 
+				limit = {
 					has_focus = focus_war
 					has_dlc = "Way of Life"
 				}
@@ -5001,9 +5001,9 @@ character_event = {
 							opinion = { who = ROOT value = 20 }
 						}
 						score_value = { #Prioritizes selecting an interesting courtier...
-				            value = 10
-				            interesting_courtier_selection_score = yes
-				        }
+							value = 10
+							interesting_courtier_selection_score = yes
+						}
 						save_event_target_as = vassals_daughter
 						break = yes
 					}
@@ -5038,15 +5038,14 @@ character_event = {
 						opinion = { who = ROOT value = 20 }
 					}
 					score_value = { #Prioritizes selecting an interesting courtier...
-			            value = 10
-			            interesting_courtier_selection_score = yes
-			        }
+						value = 10
+						interesting_courtier_selection_score = yes
+					}
 					save_event_target_as = vassals_daughter
 				}
 			}
 		}
 	}
-	
 
 	option = {
 		name = "EVTOPTA72090" #Flirt
@@ -5291,7 +5290,7 @@ character_event = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = {
 			text = "EVTOPTA72097" #The seducer (FROM) must marry my daughter!
 			trigger = {
@@ -5742,9 +5741,9 @@ character_event = {
 	}
 }
 
-###########################################
-# Flag management                         #
-###########################################
+#########################################
+#	Flag management						#
+#########################################
 
 # Safety catch - clears character flags and modifiers
 character_event = {
@@ -5767,7 +5766,7 @@ character_event = {
 		clr_character_flag = medium_food
 		clr_character_flag = low_food
 		clr_character_flag = castle_problems
-		clr_character_flag = feast_jester 
+		clr_character_flag = feast_jester
 		clr_character_flag = feast_drunkard_guest
 		clr_character_flag = feast_duel
 		clr_character_flag = feast_boar_hunt

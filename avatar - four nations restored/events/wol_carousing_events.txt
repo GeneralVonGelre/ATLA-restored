@@ -1,10 +1,9 @@
-###########################################
-#                                         #
-# Way of Life carousing events            #
-#                                         #
-# ID WoL.4000-WoL.4999                    #
-#                                         #
-###########################################
+#############################################
+#											#
+#	Way of Life carousing events			#
+#	ID WoL.4000-WoL.4999					#
+#											#
+#############################################
 
 # Written by Tobias Bodlund
 
@@ -434,7 +433,7 @@ character_event = {
 		}
 	}
 	
-	immediate = {         # Select interesting party event
+	immediate = {		# Select interesting party event
 		random_list = {
 			2 = {
 				modifier = {
@@ -747,8 +746,8 @@ character_event = {
 			factor = 1
 		}
 		if = {
-			limit = { 
-				NOR = { 
+			limit = {
+				NOR = {
 					has_character_modifier = cannibal
 					trait = cannibal_trait
 				}
@@ -779,8 +778,8 @@ character_event = {
 			factor = 1
 		}
 		if = {
-			limit = { 
-				NOR = { 
+			limit = {
+				NOR = {
 					has_character_modifier = cannibal
 					trait = cannibal_trait
 				}

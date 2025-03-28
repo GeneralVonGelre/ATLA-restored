@@ -194,7 +194,6 @@ succession_laws = {
 			holder_scope = { NOT = { government = lawless_piracy } }
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
 			holder_scope = { NOT = { government = chinese_imperial_government } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 			is_primary_type_title = no
 		}
 		allow = {
@@ -283,7 +282,6 @@ succession_laws = {
 			}
 			holder_scope = { NOT = { government = lawless_piracy } }
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 			#is_primary_type_title = no
 
 			OR = {
@@ -402,7 +400,6 @@ succession_laws = {
 					}
 					holder_scope = { NOT = { government = lawless_piracy } }
 					holder_scope = { NOT = { government = feudal_government_air_nomad } }
-					holder_scope = { NOT = { government = avatar_team_government } }
 				}
 			}
 		}
@@ -524,7 +521,6 @@ succession_laws = {
 			}
 			holder_scope = { NOT = { government = lawless_piracy } }
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 			holder_scope = { NOT = { government = chinese_imperial_government } }
 			#is_primary_type_title = no
 			NOT = { tier = baron }
@@ -602,7 +598,6 @@ succession_laws = {
 			}
 			holder_scope = { NOT = { government = lawless_piracy } }
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 			holder_scope = { NOT = { government = chinese_imperial_government } }
 			custom_tooltip = {
 				text = not_forced_tt
@@ -678,7 +673,6 @@ succession_laws = {
 			}
 			holder_scope = { NOT = { government = lawless_piracy } }
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -762,7 +756,6 @@ succession_laws = {
 			}
 
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 
 			OR = {
 				holder_scope = { # Viceroyalties can always have turkish succession if muslim
@@ -838,7 +831,6 @@ succession_laws = {
 			}
 			holder_scope = { NOT = { government = feudal_government_air_nomad } }
 			holder_scope = { NOT = { government = chinese_imperial_government } }
-			holder_scope = { NOT = { government = avatar_team_government } }
 			OR = {
 				is_landless_type_title = yes
 				holder_scope = { is_theocracy = no }

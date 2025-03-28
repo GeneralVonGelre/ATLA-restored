@@ -133,7 +133,7 @@ narrative_event = {
 						holy_order = no
 						#temporary = no
 						rebel = no
-						NOT = { has_landed_title = d_avatar }
+						NOT = { trait = avatar }
 						NOT = { religion = way_of_chin }
 						capital_scope = {
 								OR = {
@@ -162,7 +162,7 @@ narrative_event = {
 						holy_order = no
 						#temporary = no
 						rebel = no
-						NOT = { has_landed_title = d_avatar }
+						NOT = { trait = avatar }
 						NOT = { religion = way_of_chin }
 						capital_scope = {
 							OR = {
@@ -191,7 +191,7 @@ narrative_event = {
 						holy_order = no
 						#temporary = no
 						rebel = no
-						NOT = { has_landed_title = d_avatar }
+						NOT = { trait = avatar }
 						capital_scope = {
 							OR = {
 								region = world_si_wong
@@ -346,23 +346,12 @@ narrative_event = {
 		name = ekstory3c
 		trigger = {
 			#always = no 
-			d_avatar = {
-				holder_scope = {
-					OR = {
-						trait = avatar
-						trait = fullyrealisedavatar
-					}
-				}
-			}	
+			persistent_event_target:the_avatar = { trait = avatar }
 		}
 		k_earth_kingdom = { set_title_flag = chin_chose_avatar }
 		custom_tooltip = {
 			text = summon_avatar_chin
-			d_avatar = {
-				holder_scope = {
-					character_event = { id = ekstory.7 days = 100 random = 3 }
-				}
-			}
+			persistent_event_target:the_avatar = { character_event = { id = ekstory.7 days = 100 random = 3 } }
 			k_earth_kingdom = {
 				set_title_flag = chin_chose_avatar
 			}
@@ -398,14 +387,7 @@ narrative_event = {
 	option = { 
 		name = summontheavatar
 		trigger = {
-			d_avatar = {
-				holder_scope = {
-					OR = {
-						trait = avatar
-						trait = fullyrealisedavatar
-					}
-				}
-			}
+			persistent_event_target:the_avatar = { trait = avatar }
 		}
 		narrative_event = { id = ekstory.8 days = 150 random = 3 }
 		set_global_flag = ba_sing_se_rebellion
@@ -670,13 +652,11 @@ narrative_event = {
 	is_triggered_only = yes
 	picture = GFX_evt_avatar_conflict
 	
+	min_age = 16
+	has_character_flag = is_avatar
+	has_global_flag = ba_sing_se_rebellion
+	
 	trigger = {
-		has_landed_title = d_avatar
-		OR = { 
-			trait = avatar
-			trait = fullyrealisedavatar
-		}
-		has_global_flag = ba_sing_se_rebellion
 		year <= 630
 		year >= 280
 		NOT = { has_global_flag = kyoshi_summoned_canon }
@@ -740,23 +720,17 @@ narrative_event = {
 		random_list = {
 			#avatard is ded
 			25 = { 
-				d_avatar = { 
-					holder_scope = {
-						death = {
-							killer = ROOT
-							death_reason = death_drank_poison
-						}
+				persistent_event_target:the_avatar = {
+					death = {
+						killer = ROOT
+						death_reason = death_drank_poison
 					}
 				}
 			}
 			#avatard fells bad
 			50 = {
-				d_avatar = {
-					holder_scope = {
-						add_trait = dysentery
-						add_character_modifier = { name = bedridden_illness duration = -1 }
-					}
-				}
+				trigger = { has_dlc = "Reapers" }
+				persistent_event_target:the_avatar = { give_dysentery_effect = yes }
 			}
 			#angery avatard
 			25 = { 
@@ -1056,9 +1030,7 @@ narrative_event = {
 		d_dai_li = {
 			holder_scope = {
 				set_defacto_liege = ROOT			
-			}
-			copy_title_laws = d_avatar
-			copy_title_history = d_avatar				
+			}			
 		}
 		clr_global_flag = dai_li_disbanded
 	}
@@ -1186,7 +1158,7 @@ narrative_event = {
 			# culture_group = earth_kingdom_cultures
 			# NOR = { 
 				# has_landed_title = k_earth_kingdom
-				# has_landed_title = d_avatar
+				# trait = avatar
 			# }
 		# }
 		# set_global_flag = ending_of_jian_chain
@@ -1198,7 +1170,7 @@ narrative_event = {
 		# trigger = {
 			# NOR = { 
 				# has_landed_title = k_earth_kingdom
-				# has_landed_title = d_avatar
+				# trait = avatar
 				# culture_group = earth_kingdom_cultures
 			# }
 		# }
@@ -1210,7 +1182,7 @@ narrative_event = {
 	# option = {
 		# name = peacefulendingavatar
 		# trigger = {
-			# has_landed_title = d_avatar
+			# trait = avatar
 		# }
 		# set_global_flag = ending_of_jian_chain
 	# }
@@ -1230,17 +1202,7 @@ character_event = {
 		year >= 600
 		year <= 630
 		has_landed_title = k_earth_kingdom
-		d_avatar = {
-			has_holder = yes
-		}
-	}
-	
-	immediate = {
-		d_avatar = {
-			owner = {
-				save_event_target_as = avatar
-			}
-		}
+		persistent_event_target:the_avatar = { trait = avatar }
 	}
 	
 	option = {
@@ -1248,7 +1210,7 @@ character_event = {
 		ROOT = {
 			death = {
 				death_reason = death_murder
-				killer = event_target:avatar
+				killer = persistent_event_target:the_avatar
 			}
 		}
 	}

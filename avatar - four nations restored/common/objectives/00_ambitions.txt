@@ -20,8 +20,6 @@ obj_become_chancellor = {
 		is_councillor = no
 		can_be_chancellor_trigger = yes
 		NOT = { has_dlc = "Zeus" }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	
 	chance = {
@@ -133,8 +131,6 @@ obj_become_marshal = {
 		is_councillor = no
 		can_be_marshal_trigger = yes
 		NOT = { has_dlc = "Zeus" }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	chance = {
 		factor = 100
@@ -245,8 +241,6 @@ obj_become_treasurer = {
 		is_councillor = no
 		can_be_treasurer_trigger = yes
 		NOT = { has_dlc = "Zeus" }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	chance = {
 		factor = 100
@@ -365,8 +359,6 @@ obj_become_spymaster = {
 		is_councillor = no
 		can_be_spymaster_trigger = yes
 		NOT = { has_dlc = "Zeus" }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	
 	chance = {
@@ -486,8 +478,6 @@ obj_become_spiritual = {
 		is_councillor = no
 		can_be_spiritual_trigger = yes
 		NOT = { has_dlc = "Zeus" }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	chance = {
 		factor = 100
@@ -596,8 +586,6 @@ obj_amass_wealth = {
 		is_landed = yes
 		NOT = { trait = charitable }
 		NOT = { trait = incapable }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	chance = {
 		factor = 100
@@ -670,7 +658,7 @@ obj_become_paragon_of_virtue = {
 		modifier = {
 			factor = 0.01
 			NOR = {
-				tier = king 
+				tier = king
 				tier = emperor
 				is_theocracy = yes
 			}
@@ -748,7 +736,7 @@ obj_become_exalted = {
 		NOT = { prestige = 1000 }
 		is_playable = yes
 		is_landed = yes
-		OR = { 
+		OR = {
 			tier = king
 			tier = emperor
 			trait = ambitious
@@ -771,7 +759,7 @@ obj_become_exalted = {
 		}
 		modifier = {
 			factor = 0.01
-			NOR = { 
+			NOR = {
 				tier = king
 				tier = emperor
 			}
@@ -835,10 +823,12 @@ obj_get_married = {
 		}
 		prisoner = no
 		is_marriage_adult = yes
-		NOT = { trait = celibate }
-		NOT = { trait = incapable }
-		NOT = { trait = eunuch }
-		NOT = { is_ascetic_trigger = yes }
+		NOR = {
+			trait = celibate
+			trait = incapable
+			trait = eunuch
+			is_ascetic_trigger = yes
+		}
 		OR = {
 			is_female = no
 			NOT = { age = 40 }
@@ -882,7 +872,7 @@ obj_get_married = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.0 
+			factor = 2.0
 			age = 25
 		}
 		modifier = {
@@ -945,13 +935,13 @@ obj_marry_ruler = {
 		is_consort = no
 		can_marry = yes
 		OR = {
-			AND = { 
-				is_female = no 
+			AND = {
+				is_female = no
 				NOT = { age = 45 }
 				has_religion_feature = religion_matriarchal
 			}
-			AND = { 
-				is_female = yes 
+			AND = {
+				is_female = yes
 				NOT = { age = 45 }
 				NOT = { has_religion_feature = religion_matriarchal }
 			}
@@ -967,16 +957,14 @@ obj_marry_ruler = {
 		is_marriage_adult = yes
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 		OR = {
-			AND = { 
-				is_female = no 
+			AND = {
+				is_female = no
 				NOT = { age = 45 }
 				has_religion_feature = religion_matriarchal
 			}
-			AND = { 
-				is_female = yes 
+			AND = {
+				is_female = yes
 				NOT = { age = 45 }
 				NOT = { has_religion_feature = religion_matriarchal }
 			}
@@ -1226,12 +1214,12 @@ obj_wants_landed_title = {
 		prisoner = no
 		is_adult = yes
 		OR = {
-			AND = { 
-				is_female = yes 
+			AND = {
+				is_female = yes
 				NOT = { age = 45 }
 				has_religion_feature = religion_matriarchal
 			}
-			AND = { 
+			AND = {
 				is_female = no
 				NOT = { has_religion_feature = religion_matriarchal }
 			}
@@ -1302,7 +1290,7 @@ obj_wants_landed_title = {
 		is_ruler = yes
 	}
 	abort = {
-		liege = { 
+		liege = {
 			OR = {
 				NOT = { is_close_relative = ROOT }
 				NOT = { num_of_extra_landed_titles = 1 }
@@ -1341,11 +1329,11 @@ obj_become_heir = {
 	
 	potential = {
 		liege = { any_child = { character = ROOT } }
-		NOT = { 
+		NOT = {
 			liege = { primary_title = { has_law = agnatic_succession } }
 			is_female = yes
 		}
-		NOT = { 
+		NOT = {
 			liege = { primary_title = { has_law = enatic_succession } }
 			is_female = no
 		}
@@ -1372,8 +1360,6 @@ obj_become_heir = {
 		}
 		prisoner = no
 		is_adult = yes
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 		is_primary_heir = no
 		NOT = { trait = incapable }
 	}
@@ -1775,8 +1761,6 @@ obj_become_king = {
 	
 	allow = {
 		NOT = { trait = incapable }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	
 	chance = {
@@ -1873,7 +1857,6 @@ obj_become_king = {
 			clr_character_flag = kingdom_claimed_with_ambition
 		}
 	}
-	
 }
 
 ### Buddhist ambitions ###
@@ -2358,7 +2341,7 @@ obj_become_paragon_of_enlightenment = {
 		modifier = {
 			factor = 0.01
 			NOR = {
-				tier = king 
+				tier = king
 				tier = emperor
 				is_theocracy = yes
 			}
@@ -2428,8 +2411,6 @@ obj_gain_any_title = {
 	
 	allow = {
 		NOT = { trait = incapable }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 	}
 	
 	chance = {
@@ -2532,7 +2513,7 @@ obj_see_the_realm_prosper = {
 		war = no
 		independent = yes
 		is_adult = yes
-		NOR = { 
+		NOR = {
 			trait = incapable
 			is_inaccessible_trigger = yes
 		}
@@ -2782,7 +2763,6 @@ obj_see_the_realm_grow = {
 	abort_effect = {
 		remove_character_modifier = conquerer_5_years
 		prestige = -200
-
 	}
 	
 	effect = {

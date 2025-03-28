@@ -64,16 +64,12 @@ laws = {
 		}
 
 		allow = {
-			trigger_if = {
-				limit = {
-					OR = {
-						has_law = ze_fire_administration_laws_0
-						has_law = ze_fire_administration_laws_1
-						has_law = ze_fire_administration_laws_2
-					}
-				}
-				has_law = ze_administration_laws_1
+			OR = {
+				has_law = ze_fire_administration_laws_0
+				has_law = ze_fire_administration_laws_1
+				has_law = ze_fire_administration_laws_2
 			}
+			has_law = ze_administration_laws_1
 		}
 
 		pass_effect = {
@@ -295,9 +291,9 @@ laws = {
 			NOT = { has_dlc = "Zeus" }
 			higher_tier_than = king
 			OR = {
-					culture = fire_imperial_culture 
-					culture = fire_islander
-				}
+				culture = fire_imperial_culture 
+				culture = fire_islander
+			}
 			holder_scope = {
 				independent = yes
 				is_feudal = yes
@@ -635,12 +631,13 @@ laws = {
 		effect = {
 			log = "RA law passed id = ze_admin_anarchy current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
-				revoke_law = ze_admin_province
+				revoke_law = ze_admin_anarchy
 				revoke_law = ze_admin_territories 
+				revoke_law = ze_admin_province
 				revoke_law = ze_admin_balance
 				revoke_law = ze_admin_slight_central
 				revoke_law = ze_admin_central
-			}	
+			}
 		}
 		
 		global_revolt_risk = 0.04
@@ -674,15 +671,19 @@ laws = {
 			}
 		}
 		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 20 }
+		}
+		
 		effect = {
 			log = "RA law passed id = ze_admin_territories current RA: [global_royalAuthority.GetValue]"		
 			hidden_effect = {
 				revoke_law = ze_admin_anarchy
+				revoke_law = ze_admin_territories 
 				revoke_law = ze_admin_province
 				revoke_law = ze_admin_balance
 				revoke_law = ze_admin_slight_central
 				revoke_law = ze_admin_central
-				subtract_variable = { which = global_royalAuthority value = 20 }
 			}
 		}
 		
@@ -727,16 +728,20 @@ laws = {
 				}
 			}
 		}
+		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 40 }
+		}
 
 		effect = {
 			log = "RA law passed id = ze_admin_province current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = ze_admin_anarchy
 				revoke_law = ze_admin_territories 
+				revoke_law = ze_admin_province
 				revoke_law = ze_admin_balance
 				revoke_law = ze_admin_slight_central
 				revoke_law = ze_admin_central
-				revoke_law = ze_admin_anarchy
-				subtract_variable = { which = global_royalAuthority value = 40 }
 			}
 		}
 		
@@ -775,17 +780,20 @@ laws = {
 				}
 			}
 		}
+		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 60 }
+		}
 
 		effect = {
 			log = "RA law passed id = ze_admin_balance current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = ze_admin_anarchy
 				revoke_law = ze_admin_territories 
+				revoke_law = ze_admin_province
 				revoke_law = ze_admin_balance
 				revoke_law = ze_admin_slight_central
 				revoke_law = ze_admin_central
-				revoke_law = ze_admin_anarchy
-				revoke_law = ze_admin_province
-				subtract_variable = { which = global_royalAuthority value = 60 }
 			}
 		}
 
@@ -825,16 +833,17 @@ laws = {
 			}
 		}
 		
+		pass_effect = { subtract_variable = { which = global_royalAuthority value = 80 } }
 		
 		effect = {
 			log = "RA law passed id = ze_admin_slight_central current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
-				revoke_law = ze_admin_territories 
-				revoke_law = ze_admin_balance
-				revoke_law = ze_admin_central
 				revoke_law = ze_admin_anarchy
+				revoke_law = ze_admin_territories 
 				revoke_law = ze_admin_province
-				subtract_variable = { which = global_royalAuthority value = 80 }
+				revoke_law = ze_admin_balance
+				revoke_law = ze_admin_slight_central
+				revoke_law = ze_admin_central
 			}
 		}
 		
@@ -883,15 +892,19 @@ laws = {
 			}
 		}
 		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 100 }
+		}
+		
 		effect = {
 			log = "RA law passed id = ze_admin_central current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = ze_admin_anarchy
 				revoke_law = ze_admin_territories 
+				revoke_law = ze_admin_province
 				revoke_law = ze_admin_balance
 				revoke_law = ze_admin_slight_central
-				revoke_law = ze_admin_anarchy
-				revoke_law = ze_admin_province
-				subtract_variable = { which = global_royalAuthority value = 100 }	
+				revoke_law = ze_admin_central
 			}
 		}
 		earth_kingdom_cultures_opinion = 15
@@ -921,6 +934,7 @@ laws = {
 		effect = {
 			log = "RA law passed id = bureaucracy_anarchy current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = bureaucracy_anarchy
 				revoke_law = underfunded_bureaucracy
 				revoke_law = balanced_bureaucracy
 				revoke_law = good_bureaucracy
@@ -953,16 +967,20 @@ laws = {
 				}
 			}
 		}
+		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 20 }
+		}
 
 		effect = {
 			log = "RA law passed id = underfunded_bureaucracy current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = bureaucracy_anarchy
+				revoke_law = underfunded_bureaucracy
 				revoke_law = balanced_bureaucracy
 				revoke_law = good_bureaucracy
 				revoke_law = slight_bureaucratic_dominance
 				revoke_law = bureaucratic_dominance
-				revoke_law = bureaucracy_anarchy
-				subtract_variable = { which = global_royalAuthority value = 20 }
 			}
 		}
 		
@@ -1003,15 +1021,19 @@ laws = {
 			}
 		}
 
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 40 }
+		}
+		
 		effect = {
 			log = "RA law passed id = balanced_bureaucracy current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = bureaucracy_anarchy
 				revoke_law = underfunded_bureaucracy
+				revoke_law = balanced_bureaucracy
 				revoke_law = good_bureaucracy
 				revoke_law = slight_bureaucratic_dominance
 				revoke_law = bureaucratic_dominance
-				revoke_law = bureaucracy_anarchy
-				subtract_variable = { which = global_royalAuthority value = 40 }
 			}
 		}
 
@@ -1048,16 +1070,20 @@ laws = {
 				}
 			}
 		}
+		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 60 }
+		}
 
 		effect = {
 			log = "RA law passed id = good_bureaucracy current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = bureaucracy_anarchy
 				revoke_law = underfunded_bureaucracy
 				revoke_law = balanced_bureaucracy
+				revoke_law = good_bureaucracy
 				revoke_law = slight_bureaucratic_dominance
 				revoke_law = bureaucratic_dominance
-				revoke_law = bureaucracy_anarchy
-				subtract_variable = { which = global_royalAuthority value = 60 }
 			}
 		}
 		
@@ -1097,16 +1123,20 @@ laws = {
 				}
 			}
 		}
+		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 80 }
+		}
 
 		effect = {
 			log = "RA law passed id = slight_bureaucratic_dominance current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = bureaucracy_anarchy
 				revoke_law = underfunded_bureaucracy
 				revoke_law = balanced_bureaucracy
 				revoke_law = good_bureaucracy
+				revoke_law = slight_bureaucratic_dominance
 				revoke_law = bureaucratic_dominance
-				revoke_law = bureaucracy_anarchy
-				subtract_variable = { which = global_royalAuthority value = 80 }
 			}
 		}
 		
@@ -1134,16 +1164,20 @@ laws = {
 				}
 			}
 		}
+		
+		pass_effect = {
+			subtract_variable = { which = global_royalAuthority value = 100 }
+		}
 
 		effect = {
 			log = "RA law passed id = bureaucratic_dominance current RA: [global_royalAuthority.GetValue]"
 			hidden_effect = {
+				revoke_law = bureaucracy_anarchy
 				revoke_law = underfunded_bureaucracy
 				revoke_law = balanced_bureaucracy
 				revoke_law = good_bureaucracy
 				revoke_law = slight_bureaucratic_dominance
-				revoke_law = bureaucracy_anarchy
-				subtract_variable = { which = global_royalAuthority value = 100 }
+				revoke_law = bureaucratic_dominance
 			}
 		}
 		

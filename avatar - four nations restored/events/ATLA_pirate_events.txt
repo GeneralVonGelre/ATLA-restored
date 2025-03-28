@@ -796,3 +796,21 @@ character_event = {
 		name = I_SEE
 	}
 }
+
+long_character_event = { #Trying to sell the Avatar into slavery
+	id = PRT.1000
+	title = SELL_AVATAR_TITLE
+	desc = sell_avatar_event_desc
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_long_frame_intrigue
+	
+	is_triggered_only = yes #Fired when selling the avatar
+	
+	option = {
+		name = SELL_AVATAR_OPTION
+		persistent_event_target:the_avatar = {
+			imprison = no
+		}
+	}
+}
+	

@@ -382,6 +382,11 @@ earth_religions = {
 		aggression = 2
 		
 		intermarry = earth_spirituality	
+		
+		character_modifier = {
+			opinion_of_avatar = -100
+			avatar_opinion = -100
+		}
 	}
 
 ########################### INDEPENDENT EARTH RELIGIONS ########################
@@ -595,7 +600,7 @@ earth_religions = {
 		female_temple_holders = yes
 		
 		god_names = {
-			 GOD_THE_SPIRITS
+			GOD_THE_SPIRITS
 		}
 		high_god_name = GOD_THE_SPIRITS
 		evil_god_names = {
@@ -756,6 +761,11 @@ fire_religions = {
 		psc_marriage = yes
 		piety_name = HONOUR
 		intermarry = fire_spirituality
+		
+		character_modifier = {
+			opinion_of_avatar = -50
+			avatar_opinion = -50
+		}
 	}
 
 	bhanti_spirituality_reformed = { # Pacifist
@@ -1260,6 +1270,7 @@ water_religions = {
 		
 		intermarry = air_religions
 		intermarry = pirate_faith
+		intermarry = water_religions
 	}
 
 	witchcraft_reformed = {
@@ -1301,6 +1312,7 @@ water_religions = {
 		
 		intermarry = air_religions
 		intermarry = pirate_faith
+		intermarry = water_religions
 	}
 
 
@@ -1344,6 +1356,7 @@ water_religions = {
 		
 		intermarry = air_religions
 		intermarry = pirate_faith
+		intermarry = water_religions
 	}
 
 	the_great_swamp_reformed = { # Spiritualist
@@ -1469,6 +1482,7 @@ water_religions = {
 		
 		intermarry = air_religions
 		intermarry = pirate_faith
+		intermarry = water_religions
 	}
 }
 
@@ -1553,6 +1567,10 @@ modern_religions = {
 		aggression = 2
 		allow_in_ruler_designer = no
 		
+		character_modifier = {
+			opinion_of_avatar = -100
+			avatar_opinion = -100
+		}
 	}
 }
 
@@ -1607,6 +1625,7 @@ outlaw_religions = {
 		intermarry = earth_spirituality
 		intermarry = children_of_si_wong
 		intermarry = children_of_si_wong_reformed
+		intermarry = water_religions
 		
 	}
 
@@ -1647,6 +1666,11 @@ outlaw_religions = {
 		aggression = 3
 		
 		intermarry = earth_religions
+		
+		character_modifier = {
+			opinion_of_avatar = -50
+			avatar_opinion = -50
+		}
 	}
 	
 	barbarism = { # Barbarism

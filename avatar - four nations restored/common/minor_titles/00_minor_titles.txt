@@ -210,8 +210,6 @@ title_commander = {
 		prisoner = no
 		NOT = { trait = incapable }
 		NOT = { is_inaccessible_trigger = yes }
-		NOT = { trait = avatar }
-		NOT = { trait = fullyrealisedavatar }
 		NOT = { has_character_flag = guru }
 		NOT = { has_character_modifier = refusing_to_lead }
 		OR = {
@@ -239,8 +237,6 @@ title_commander = {
 							prisoner = no
 							NOT = { trait = incapable }
 							NOT = { is_inaccessible_trigger = yes }
-							NOT = { trait = avatar }
-							NOT = { trait = fullyrealisedavatar }
 							NOT = { has_character_flag = guru }
 							NOT = { has_character_modifier = refusing_to_lead }
 							NOR = {
