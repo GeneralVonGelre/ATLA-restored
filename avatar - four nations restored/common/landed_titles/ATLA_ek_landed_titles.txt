@@ -4086,7 +4086,7 @@ e_greater_omashu = {
 			color = { 124 177 42 }
 			color2 = { 255 255 255 }
 			capital = 611 # c_the_divide
-			
+
 			c_north_divide = { # 610
 				color = { 114 124 99 }
 				color2 = { 255 255 255 }
@@ -4096,7 +4096,6 @@ e_greater_omashu = {
 				holy_site = the_divided
 
 				b_north_divide = { }
-				
 			}
 			c_the_divide = { # 611
 				color = { 124 177 42 }
@@ -4108,7 +4107,6 @@ e_greater_omashu = {
 				holy_site = omashuan_ethics
 
 				b_the_divide = { }
-				
 			}
 			c_south_divide = { # 612
 				color = { 142 175 91 }
@@ -4119,7 +4117,24 @@ e_greater_omashu = {
 				holy_site = the_divided
 
 				b_south_divide = { }
-				
+			}
+			c_west_divide = { # 685
+				b_west_divide = {}
+			}
+			c_east_divide = { # 686
+				b_east_divide = {}
+			}
+			c_west_pass = { # 687
+				b_west_pass = {}
+			}
+			c_south_pass = { # 688
+				b_south_pass = {}
+			}
+			c_east_pass = { # 689
+				b_east_pass = {}
+			}
+			c_north_pass = { # 670
+				b_north_pass = {}
 			}
 		}
 		d_senlin = {
